@@ -1,0 +1,31 @@
+<!-- olusturulan form komponenti image'ın altında cagrılmıstır. -->
+<!-- layout ve dizayn için bootstrap kullanılmıstır, logo'daki renklerin rgb'si alınarak button ve navbar'da kullanılmıştır. -->
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"><span
+                style="color: rgb(233,30,99); font-weight: 500; font-size: large;">Kullanıcı Kayıt Formu</span></a>
+    </div>
+</nav>
+
+<!-- img - form -->
+<div class="container mt-5">
+    <div class="column">
+        <div class="col-md-6 mx-auto">
+            <img src="assets/images/argus.png" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 mx-auto">
+            <app-user-form></app-user-form>
+        </div>
+
+    </div>
+</div>
+
+<!-- basarılı/basarısız durumu icin alert -->
+<div id="alerts-container" class="container col-md-12 text-center"></div>
+
+<!-- footer -->
+<footer class="bg-dark text-white text-center py-3">
+    &copy; 2023 Süphan Yakut. Tüm Hakları Saklıdır.
+</footer>

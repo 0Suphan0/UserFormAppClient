@@ -1,0 +1,44 @@
+<!-- ngModel ile arkadaki user'ın field'ları doldurulur. ngSubmit ile form submit edilince saveUser metodu tetiklenir. -->
+<!-- form'a verilen ngNativeValidate HTML'in kendi validasyonlarını kullanmamızı sağlar.(required'lar etkin olur.) -->
+<div class="container mt-5">
+  <form ngNativeValidate (ngSubmit)="saveUser()">
+    <div class="mb-3">
+      <label for="firstName" class="form-label">Adınız:</label>
+      <input required type="text" class="form-control" id="firstName" [(ngModel)]="user.name" name="firstName">
+    </div>
+
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Soyadınız:</label>
+      <input required type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName" name="lastName">
+    </div>
+
+    <div class="mb-3">
+      <label for="birthdate" class="form-label">Doğum Tarihiniz:</label>
+      <input required type="date" class="form-control" id="birthdate" [(ngModel)]="user.birthDate" name="birthdate">
+    </div>
+
+    <div class="mb-3">
+      <label for="city" class="form-label">Şehir:</label>
+      <input required type="text" class="form-control" id="city" [(ngModel)]="user.city" name="city">
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input required type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email">
+    </div>
+
+    <div class="mb-3">
+      <label for="gender" class="form-label">Cinsiyet:</label>
+      <select class="form-select" id="gender" [(ngModel)]="user.gender" name="gender" required>
+        <option value="erkek">Erkek</option>
+        <option value="kadın">Kadın</option>
+        <option value="other">Belirtmek İstemiyorum</option>
+      </select>
+    </div>
+
+    <div class="mb-3 text-center">
+      <button style="color: white; background-color: rgb(233,30,99);" type="submit" class="btn">Kaydet</button>
+
+    </div>
+  </form>
+</div>
